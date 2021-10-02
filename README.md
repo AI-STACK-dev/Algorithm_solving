@@ -8,7 +8,10 @@ HUFSBME Algorithm Solving Study with 4 tough man!
 스터디를 진행하며 초기에는 이것이 코딩테스트를 통해 이론 및 예제 코드에 대해 익힌다. <br>
 이후 에는 백준 및 프로그래머스 사이트에서 문제를 풀어가며 보다 다양한 문제를 풀어갈것이다. <br>
 
-Reference
+❗️Reference
+https://www.acmicpc.net/ (백준 사이트) <br>
+https://programmers.co.kr/ (프로그래머스) <br>
+https://swexpertacademy.com/main/main.do (삼성 Expert Academy)
 
 
 # 📌Algorithm_solved_personal_state
