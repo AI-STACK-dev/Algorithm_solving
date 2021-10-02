@@ -5,8 +5,11 @@ HUFSBME Algorithm Solving Study with 4 tough man!
 목표는 기업들의 코딩테스트 합격 및 다양한 알고리즘 대회 출전함으로써 알고리즘을 능력을 기르는것에 있다.
 
 # 📕Study Method
-스터디를 진행하며 초기에는 이것이 코딩테스트를 통해 이론 및 예제 코드에 대해 익힌다. 
-이후 에는 백준 및 프로그래머스 사이트에서 문제를 풀어가며 보다 다양한 문제를 풀어갈것이다. 
+스터디를 진행하며 초기에는 이것이 코딩테스트를 통해 이론 및 예제 코드에 대해 익힌다. <br>
+이후 에는 백준 및 프로그래머스 사이트에서 문제를 풀어가며 보다 다양한 문제를 풀어갈것이다. <br>
+
+Reference
+
 
 # 📌Algorithm_solved_personal_state
  [![Solved.ac. stats](http://mazassumnida.wtf/api/mini/generate_badge?boj=cjstkek0907)](https://solved.ac/cjstkek0907)
