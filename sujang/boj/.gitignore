@@ -1,0 +1,6 @@
+/.metadata/
+/java/.settings/
+/java/.classpath
+/java/.project
+/java/bin/
+/java/src/module-info.java
