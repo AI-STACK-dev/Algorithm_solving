@@ -24,7 +24,6 @@ def update(start, end, index, value):
     else:
         return update(start, mid, index * 2, value - right_val)
     
-
 init(0, N - 1, 1)
 for i in range(N - 1, -1, -1):
     where = update(0, N - 1, 1, data[i] + 1)
