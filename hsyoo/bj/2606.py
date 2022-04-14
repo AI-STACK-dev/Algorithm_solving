@@ -1,30 +1,26 @@
 from collections import deque
 
+n = int(input())
+m = int(input())
+
+graph  = [[] for _ in range(n+1)]
+for _ in range(m):
+    a,b = map(int,input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+visited = [False] * (n+1)
+
+
 def bfs(graph, start, visited):
-    q = deque()
     visited[start] = True
+    q = deque()
     q.append(start)
+
     while q:
         now = q.popleft()
-        print(now, end = ' ')
         for i in graph[now]:
             if visited[i] == False:
                 q.append(i)
                 visited[i] = True
-
-graph = [
-    [],
-    [2,3,8],
-    [1,7],
-    [1,4,5],
-    [3,5],
-    [3,4],
-    [7],
-    [2,6,8],
-    [1,7]
-]
-visited = [False] * len(graph)
-
 bfs(graph, 1, visited)
-print()
-
+print(sum(visited)-1)
