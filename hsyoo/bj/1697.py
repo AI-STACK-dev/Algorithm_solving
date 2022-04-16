@@ -24,22 +24,20 @@ def bfs(n,k):
 
 print(bfs(n,k))
 """
-
-import sys
 from collections import deque
 
-def bfs(v):
-    q = deque([v]) #큐 구현을 위해 deque 사용
-    while q:
-        v = q.popleft()
-        print(q)
-        if v == k:
-            return visited[v]
-        for i in (v-1, v+1, 2*v):
-            if 0 <= i <= 100000 and not visited[i]:
-                visited[i] = visited[v] + 1
-                q.append(i)
+n, k = map(int, input().split())
+visited = [False] * 100001
 
-n, k = map(int, sys.stdin.readline().split())
-visited = [0 for i in range(100001)]
-print(bfs(n))
+q = deque()
+q.append((n,0))
+visited[n] = True
+while q:
+    now,cnt = q.popleft()
+    if now == k:
+        break
+    for i in [now-1, now+1, 2*now]:
+        if 0<=i<=100000 and visited[i] == False:
+            q.append((i, cnt + 1))
+            visited[i] = True
+print(cnt)
