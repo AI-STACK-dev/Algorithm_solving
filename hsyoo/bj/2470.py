@@ -1,23 +1,20 @@
 n = int(input())
 ary = list(map(int, input().split()))
-left = 0
-right = n-1
 ary.sort()
-ans = ary[right] - ary[left]
-al = left
-ar = right
-while right > left:
-    temp = ary[right] + ary[left]
-    if abs(temp) < abs(ans):
-        ans = temp
-        ar = right
-        al = left
-        if ans == 0:
-            break
-        
-    if temp < 0:
-        left += 1
-    elif temp >= 0:
-        right -= 1
 
-print(ary[al], ary[ar])
+def two_pointer(ary, start, end):
+    abs_min = int(1e10)
+    while start < end:
+        temp = ary[start] + ary[end]
+        if abs(temp) < abs_min:
+            al = start
+            ar = end
+            abs_min = abs(temp)
+        if temp < 0:
+            start += 1
+        else:
+            end -= 1
+    return al, ar
+
+start, end = two_pointer(ary, 0, n-1)
+print(ary[start], ary[end])
