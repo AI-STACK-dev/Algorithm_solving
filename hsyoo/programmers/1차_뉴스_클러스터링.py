@@ -16,6 +16,8 @@ def solution(str1, str2):
     else:
         list_union = deepcopy(list_a)
         c1 = Counter(list_a)
+        print(c1.keys())
+        print(list(c1.elements()))
         for case in list_b:
             if c1[case] == 0:
                 list_union.append(case)

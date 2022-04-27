@@ -68,7 +68,9 @@ def solution(information, queries):
 
     for query in queries:
         query = query.replace("and ", "")
+        # print(query)
         query = query.split()
+        # print(query)
         target_key = ''.join(query[:-1])
         target_score = int(query[-1])
         count = 0
