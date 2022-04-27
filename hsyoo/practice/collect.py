@@ -9,3 +9,7 @@ print(counter.most_common(10))
 name_dict = defaultdict()
 name_dict['con'] = 1
 print(name_dict)
+
+a = "yesterday"
+for case in a:
+    print(case)
