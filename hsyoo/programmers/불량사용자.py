@@ -20,18 +20,20 @@ def solution(user_id, banned_id):
         list_.append(list(user_dict[ban]))
     items = list(product(*list_))
     for case in items:
-        case = list(case)
-        case.sort()
+        # case = list(case)
+        # case.sort()
         set_ = set(case)
         if len(set_) != len(banned_id):
             continue
         else:
             set_ = list(set_)
+            set_.sort()
+            # print(set_)
             count['_'.join(set_)]
 
     answer = len(count.keys())
     return answer
         
-print(solution(["frodo", "fradi", "crodo", "abc123", "frodoc"], ["fr*d*", "abc1**"]	))
-print(solution(["frodo", "fradi", "crodo", "abc123", "frodoc"]	, ["*rodo", "*rodo", "******"]	))
+# print(solution(["frodo", "fradi", "crodo", "abc123", "frodoc"], ["fr*d*", "abc1**"]	))
+# print(solution(["frodo", "fradi", "crodo", "abc123", "frodoc"]	, ["*rodo", "*rodo", "******"]	))
 print(solution(["frodo", "fradi", "crodo", "abc123", "frodoc"]	, ["fr*d*", "*rodo", "******", "******"]	))
