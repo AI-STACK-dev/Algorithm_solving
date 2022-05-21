@@ -23,5 +23,4 @@ def binary_search(stones,k):
             hi = mid
     return lo
 def solution(stones, k):
-    return binary_search(stones,k)a
-    
+    return binary_search(stones,k)
