@@ -32,20 +32,70 @@
 #     else:
 #         return answer
 
-from itertools import permutations
+# from itertools import permutations
 
+# def solution(n, weak, dist):
+#     length = len(weak)
+#     for i in range(length):
+#         weak.append(weak[i]+n)
+#     answer = len(dist) + 1
+#     for start in range(length):
+#         for friends in list(permutations(dist, len(dist))):
+#             count = 1
+#             # 해당 친구가 점검할 수 있는 마지막 위치 
+#             position = weak[start] + friends[count - 1]
+#             # 시작점부터 모든 취약 지점을 확인
+#             for index in range(start, start + length):
+#                 # 점검할 수 있는 위치를 벗어나는 경우
+#                 if position < weak[index]:
+#                     count += 1
+#                     # 더 투입이 불가능하다면 종료
+#                     if count > len(dist):
+#                         break
+#                     position = weak[index] + friends[count - 1]
+#             answer = min(answer, count)
+#     if answer > len(dist):
+#         return -1
+#     return answer
+
+
+
+
+
+
+from itertools import permutations
 def solution(n, weak, dist):
-    L = len(weak)
-    cand = []
-    weak_point = weak + [w + n for w in weak]
-    
-    for i, start in enumerate(weak):
-        for friends in permutations(dist):
+    length = len(weak)
+    for i in range(length):
+        weak.append(n + weak[i])
+    answer = len(dist) + 1
+    for start in range(length):
+        for friends in list(permutations(dist, len(dist))):
             count = 1
-            position = start
-            for friend in friends:
-                position += friend
-                print(position, weak_point[i+L-1])
+            position = weak[start] + friends[count - 1]
+            for index in range(start, start + length):
+                if position < weak[index]:
+                    count += 1
+                    if count > len(dist):
+                        break
+                    position = weak[index] + friends[count - 1]
+            answer = min(answer, count)
+    if answer > len(dist):
+        return -1
+    else:
+        return answer
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 print(solution(12, [1, 5, 6, 10], [1, 2, 3, 4]))
