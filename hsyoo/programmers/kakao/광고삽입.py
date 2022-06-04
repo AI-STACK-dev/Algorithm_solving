@@ -21,6 +21,7 @@ def solution(play_time, adv_time, logs):
         start, end = l.split('-')
         start = str_to_int(start)
         end = str_to_int(end)
+        print(start, end)
         all_time[start] += 1
         all_time[end] -= 1
     

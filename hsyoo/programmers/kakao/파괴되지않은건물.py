@@ -23,7 +23,6 @@ def solution(board, skills):
     for col in range(m):
         for row in range(n):
             prefix_sum[row+1][col] += prefix_sum[row][col]
-
     answer = 0
     for i in range(n):
         for j in range(m):

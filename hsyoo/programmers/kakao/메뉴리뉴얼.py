@@ -43,7 +43,7 @@ def solution(orders, course):
 				res = ''.join(sorted(li))
 				candidates.append(res)
 		sorted_candidates = Counter(candidates).most_common()
-		print(sorted_candidates)
+		# print(sorted_candidates)
 		answer += [menu for menu, cnt in sorted_candidates if cnt > 1 and cnt == sorted_candidates[0][1]]
 	return sorted(answer)
 print(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"], [2,3,4]))
