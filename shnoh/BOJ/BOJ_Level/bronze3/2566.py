@@ -1,6 +1,6 @@
 import sys; input = sys.stdin.readline;
 data = []
-Max = 0
+Max = -1
 for i in range(9):
     data.append(list(map(int, input().split())))
 for i in range(9):
